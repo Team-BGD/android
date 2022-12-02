@@ -4,6 +4,9 @@
 
     <data>
 
+        <variable
+            name="homeFragment"
+            type="com.example.gdg.presentation.ui.component.home.HomeFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,14 +19,14 @@
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.22"/>
+            app:layout_constraintGuide_percent="0.22" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/treeBottomGuide"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.76"/>
+            app:layout_constraintGuide_percent="0.76" />
 
 
         <androidx.constraintlayout.widget.Guideline
@@ -31,52 +34,56 @@
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.05"/>
+            app:layout_constraintGuide_percent="0.05" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/treeEndGuide"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.95"/>
+            app:layout_constraintGuide_percent="0.95" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/shareTopGuide"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.83"/>
+            app:layout_constraintGuide_percent="0.83" />
 
         <ImageView
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/ic_tree"
-            app:layout_constraintTop_toTopOf="@id/treeTopGuide"
             app:layout_constraintBottom_toBottomOf="@id/treeBottomGuide"
+            app:layout_constraintEnd_toEndOf="@id/treeEndGuide"
             app:layout_constraintStart_toStartOf="@id/treeStartGuide"
-            app:layout_constraintEnd_toEndOf="@id/treeEndGuide"/>
+            app:layout_constraintTop_toTopOf="@id/treeTopGuide" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/shareBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/bg_share_btn"
+            android:onClick="@{homeFragment::onClick}"
             android:text="@string/shareTree"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:background="@drawable/bg_share_btn"
-            app:layout_constraintStart_toStartOf="@id/treeStartGuide"
             app:layout_constraintEnd_toEndOf="@id/treeEndGuide"
-            app:layout_constraintTop_toBottomOf="@id/shareTopGuide"/>
+            app:layout_constraintStart_toStartOf="@id/treeStartGuide"
+            app:layout_constraintTop_toBottomOf="@id/shareTopGuide" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/writeLaterBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/bg_share_btn"
+            android:onClick="@{homeFragment::onClick}"
             android:text="@string/writeLater"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:background="@drawable/bg_share_btn"
-            app:layout_constraintStart_toStartOf="@id/treeStartGuide"
             app:layout_constraintEnd_toEndOf="@id/treeEndGuide"
-            app:layout_constraintTop_toBottomOf="@id/shareTopGuide"/>
+            app:layout_constraintStart_toStartOf="@id/treeStartGuide"
+            app:layout_constraintTop_toBottomOf="@id/shareTopGuide" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
