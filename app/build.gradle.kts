@@ -8,10 +8,10 @@ plugins {
 
 android {
     compileSdk = Version.COMPILE_VERSION
-    namespace = "com.example.scpandroid"
+    namespace = "com.example.dgd_android"
 
     defaultConfig {
-        applicationId = "com.example.scpandroid"
+        applicationId = "com.example.dgd_android"
         minSdk = Version.MIN_VERSION
         targetSdk = Version.TARGET_VERSION
         versionCode = Version.VERSION_CODE
