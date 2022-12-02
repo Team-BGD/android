@@ -19,7 +19,7 @@ class SelectDecoFragment: BaseFragment<FragmentSelectDecoBinding>(R.layout.fragm
     fun click(view: View) {
         when (view.id) {
             R.id.backBtn -> requireActivity().findNavController(R.id.mainContainer).popBackStack()
-            R.id.nextBtn -> requireActivity().findNavController(R.id.mainContainer).popBackStack()
+            R.id.nextBtn -> requireActivity().findNavController(R.id.mainContainer).navigate(R.id.action_selectDecoFragment_to_laterFragment)
             else -> {
                 deco.forEachIndexed { index, v ->
                     if (v == view) {

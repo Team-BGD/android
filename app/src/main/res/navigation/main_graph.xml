@@ -19,5 +19,15 @@
         android:id="@+id/selectDecoFragment"
         android:name="com.example.gdg.presentation.ui.component.later.SelectDecoFragment"
         android:label="SelectDecoFragment"
-        tools:layout="@layout/fragment_select_deco"/>
+        tools:layout="@layout/fragment_select_deco">
+        <action
+            android:id="@+id/action_selectDecoFragment_to_laterFragment"
+            app:destination="@id/laterFragment"
+            app:popUpTo="@id/selectDecoFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/laterFragment"
+        android:name="com.example.gdg.presentation.ui.component.later.LaterFragment"
+        android:label="LaterFragment"
+        tools:layout="@layout/fragment_later"/>
 </navigation>
