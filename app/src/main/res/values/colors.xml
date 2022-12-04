@@ -13,4 +13,5 @@
     <color name="dialogBackground">#B83D4455</color>
     <color name="itemUnSelect">#1AFFFFFF</color>
     <color name="itemSelect">#40FFFFFF</color>
+    <color name="editBackground">#1AFFFFFF</color>
 </resources>
